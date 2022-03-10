@@ -1,0 +1,32 @@
+/*!
+ * VueStudio v1.0.0 (https://seantheme.com/vue-studio/)
+ * Copyright 2020 SeanTheme
+ */
+
+@import '_variables.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
+@import '_functions.scss';
+@import '_mixins.scss';
+@import '_helper.scss';
+@import '_reboot.scss';
+
+@import '_app.scss';
+@import '_ui.scss';
+@import '_plugins.scss';
+@import '_pages.scss';
+@import '_widgets.scss';
+
+.svg-inline--fa.fa-fw {
+    width: 1.25em;
+}
+.ms-auto {
+    margin-left: auto!important;
+}
+.me-auto {
+    margin-right: auto!important;
+}
+.me-2 {
+    margin-right: .5rem!important;
+}

@@ -61,16 +61,18 @@
           @filtered="filtered"
         >
           <template v-slot:cell(Action)="row">
-            <router-link :to="{ name: 'admin.announcement.edit', params: { userId: row.item.id }}">
-              <i class="fas fa-edit"></i>
-              </router-link>
-            <b-button
-              size="sm"
-              @click="announcementdelete(row.item)"
-              class="mr-2"
-            >
-              <b-icon icon="trash"></b-icon>
-            </b-button>
+            <b-button pill v-if="row.item.status == 'CHECKEDOUT'" disabled variant="primary">
+				CHECKEDOUT
+			</b-button>
+            <b-button pill v-else variant="primary" @click="checkout(row.item)">
+				CHECKEDOUT
+			</b-button>
+            <b-button pill v-if="row.item.status == 'AVAILABLE'" disabled variant="primary">
+				CHECKEDIN
+			</b-button>
+            <b-button pill v-else variant="primary" @click="checkin(row.item)">
+				CHECKEDIN
+			</b-button>
           </template>
         </b-table>
         <b-col cols="8" class="mx-auto mt-4">
@@ -120,6 +122,13 @@ export default {
       async showCreateBook() {
       this.$router.push("/book/create");
     },
+    async getList() {
+      let _this = this;
+     const res = await fetch("/apiadmin/v1/books/list");
+      const  comments = await res.json();
+        _this.books = comments.data;
+        _this.filteredLength = comments.length;
+    },
     filtered(arr, num) {
       console.log("array", arr);
       console.log("number", num);
@@ -137,19 +146,48 @@ export default {
           this.$router.go();
         });
     },
+    checkout: function(item) {
+		axios({
+        url: '/apiadmin/v1/book/checkout',
+        method: 'POST',
+		data: {
+			book_id: item.id,
+		},
+        }).then((response) => {
+		console.log(response);
+        this.$bvToast.toast("Book has been Checkout", {
+          title: "Upload",
+          variant: "success",
+          noAutoHide: false,
+          solid: true,
+        });
+        this.books = [];
+        this.getList()
+      });
+    },
+    checkin: function(item) {
+		axios({
+        url: '/apiadmin/v1/book/checkIn',
+        method: 'POST',
+		data: {
+			book_id: item.id,
+		},
+        }).then((response) => {
+		console.log(response);
+        this.$bvToast.toast("Book has been CheckIn", {
+          title: "Upload",
+          variant: "success",
+          noAutoHide: false,
+          solid: true,
+        });
+        this.books = [];
+        this.getList()
+      });
+    },
   },
-  mounted() {
-    const request = async () => {
-      const res = await fetch("/apiadmin/v1/books/list");
-      console.log(res);
-      const books = await res.json();
-      console.log(books);
-      return books.data;
-    };
-    request().then((data) => {
-      this.books = data;
-      this.filteredLength = data.length;
-    });
+  async created() {
+    let _this = this;
+    _this.getList();
   },
 };
 </script>

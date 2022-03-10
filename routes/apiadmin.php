@@ -17,4 +17,6 @@ Route::group(['prefix' => 'v1', 'namespace' => 'V1'], function () {
   //books
   Route::get('/books/list', [BooksController::class, 'getBooks']);
   Route::post('/book/create', [BooksController::class, 'addBook']);
+  Route::post('/book/checkout', [BooksController::class, 'bookCheckout']);
+  Route::post('/book/checkIn', [BooksController::class, 'bookCheckIn']);
 });

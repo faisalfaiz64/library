@@ -5,8 +5,12 @@ const appSidebarMenu = [
 		is_header: true
 	},
 	{
-		url: '/admin/dashboard',
+		url: '/dashboard',
 		text: 'Dashboard'
+    },
+	{
+		url: '/books',
+		text: 'Books'
     },
 ];
 

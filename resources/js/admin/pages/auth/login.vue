@@ -23,10 +23,14 @@
 
 				<b-form-group>
 					<b-form-checkbox v-model="remember" name="remember" id="rememberMe">Remember me</b-form-checkbox>
+					
 				</b-form-group>
 
 				<button :loading="form.busy" type="submit" class="btn btn-primary btn-lg d-block w-100 fw-500 mb-3">{{ $t('login') }}</button>
 			</form>
+			<router-link :to="{ name: 'register'}">
+              register
+              </router-link>
 		</div>
 		<!-- END login-content -->
 	</div>

@@ -10,6 +10,7 @@ export default async (to, from, next) => {
   }
 
   if (store.getters['auth/check']) {
+    console.log('here')
     next({ name: 'admin.dashboard' })
   } else {
     next()

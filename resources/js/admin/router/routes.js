@@ -5,7 +5,7 @@ const Dashboard = () => import('~admin/pages/Dashboard').then(m => m.default || 
 
 
 export default [
-  { path: '*', redirect: '/dashboard' },
+ 
   { path: '/register', name: 'register', component: register },
   { path: '/login', name: 'login', component: Login },
   { path: '/',

@@ -37,6 +37,7 @@ import 'vue-hljs/dist/vue-hljs.min.css'
 import 'vue2-daterange-picker/dist/vue2-daterange-picker.css'
 import 'vue-wysiwyg/dist/vueWysiwyg.css'
 import "vue-easytable/libs/theme-default/index.css";
+
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios
 Vue.use(wysiwyg, { maxHeight: '300px'})

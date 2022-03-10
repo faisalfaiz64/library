@@ -1,0 +1,67 @@
+// More ../fonts
+
+/*
+@font-face {
+	font-family: 'ge-flow-bold';
+	src: url('../fonts/ge-flow-bold.eot');
+	src: local('☺'), url('../fonts/ge-flow-bold.woff') format('woff'), url('../fonts/ge-flow-bold.ttf') format('truetype'), url('../fonts/ge-flow-bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ge-flow-regular';
+	src: url('../fonts/ge-flow-regular.eot');
+	src: local('☺'), url('../fonts/ge-flow-regular.woff') format('woff'), url('../fonts/ge-flow-regular.ttf') format('truetype'), url('../fonts/ge-flow-regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'gotham-rounded-bold';
+	src: url('../fonts/gotham-rounded-bold.eot');
+	src: local('☺'), url('../fonts/gotham-rounded-bold.woff') format('woff'), url('../fonts/gotham-rounded-bold.ttf') format('truetype'), url('../fonts/gotham-rounded-bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'gotham-rounded-book';
+	src: url('../fonts/gotham-rounded-book.eot');
+	src: local('☺'), url('../fonts/gotham-rounded-book.woff') format('woff'), url('../fonts/gotham-rounded-book.ttf') format('truetype'), url('../fonts/gotham-rounded-book.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*/
+
+textarea,input{
+	font-family: 'Montserrat', 'Cairo', sans-serif!important;
+}
+
+.ltr{
+	a,p,div,span,b,label,button,.button{
+		font-family: 'Montserrat', 'Cairo', sans-serif;
+	}
+
+	h2,h3,h4,h5,h6{
+		font-family: 'Montserrat', 'Cairo', sans-serif;
+	}
+}
+
+.rtl{
+	a,p,div,span,b,label{
+		font-family: 'Montserrat', 'Cairo', sans-serif;
+	}
+
+	button,.button{
+		font-family: 'Montserrat', 'Cairo', sans-serif!important;
+	}
+
+	textarea::placeholder,input::placeholder{
+		font-family: 'Montserrat', 'Cairo', sans-serif!important;
+	}
+
+	h2,h3,h4,h5,h6{
+		font-family: 'Montserrat', 'Cairo', sans-serif;
+	}
+}

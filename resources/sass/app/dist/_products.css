@@ -1,0 +1,50 @@
+.products {
+  justify-content: center;
+}
+.products figure {
+  display: flex;
+  align-items: center;
+  outline: 2px solid #FFFFFF;
+  margin: 2%;
+  flex-basis: 27%;
+}
+@media (max-width: 991px) {
+  .products figure {
+    flex-wrap: wrap-reverse;
+    text-align: center;
+    flex-basis: 45% !important;
+  }
+}
+@media (max-width: 768px) {
+  .products figure {
+    flex-wrap: wrap-reverse;
+    text-align: center;
+  }
+}
+@media (max-width: 575px) {
+  .products figure {
+    flex-wrap: wrap-reverse;
+    flex-basis: 40% !important;
+  }
+}
+.products figure img {
+  width: 100%;
+  height: 180px;
+  padding: 10px;
+  object-fit: contain;
+}
+.products figure .title {
+  font-size: 1.5em;
+  color: #48391F;
+  font-weight: 800;
+}
+.products figure .sub-title {
+  font-size: 1em;
+  color: #FFFFFF;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+}
+.products figure .btn {
+  font-size: 0.8em;
+  min-width: 100px !important;
+}

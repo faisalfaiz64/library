@@ -1,0 +1,30 @@
+.EN{
+	#EN{
+		display: none;
+	}
+	#AR{
+		display: block;
+	}
+}
+.AR{
+	#AR{
+		display: none;
+	}
+	#EN{
+		display: block;
+	}
+}
+
+.ltr{
+    .lang{
+        right: 5%;
+        left: auto;
+    }
+}
+
+.rtl{
+    .back{
+        left: auto;
+        right: 5%;
+      }
+}

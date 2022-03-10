@@ -1,0 +1,19 @@
+.thank_you{
+    text-align: center;
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h2{
+        color: #F1B82D;
+        font-size: 3em;
+        color: #F1B82D;
+        font-weight: 600;
+    }
+    img{
+        width: 50%;
+        max-width: 180px;
+        display: block;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,25 @@
+form{
+	label{
+		position: relative!important;
+		color: #ACACAC!important;
+        padding-left: 20px !important;
+	}
+	input{
+	    background: #3D3D3D !important;
+	    box-shadow: 4px 4px 20px rgba(0,0,0,0.22);
+	    border-radius: 30px !important;
+	    border: 0 !important;
+	    color: white!important;
+	    padding: 1em!important;
+	    &:focus{
+	        box-shadow: 0 0 0 0.2rem #F1B82D!important;
+	    }
+	}
+}
+
+.iziToast-wrapper-bottomCenter, .iziToast-wrapper-center{
+    right: 0!important;
+    bottom: 0!important;
+    left: auto!important;
+    text-align: right!important;
+}

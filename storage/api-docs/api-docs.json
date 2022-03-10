@@ -1,0 +1,315 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Nas Project",
+        "description": "Implementation of Swagger with in Laravel",
+        "contact": {
+            "email": "admin@admin.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:8000/",
+            "description": "Demo API Server"
+        }
+    ],
+    "paths": {
+        "/api/import/user/data": {
+            "post": {
+                "tags": [
+                    "Import"
+                ],
+                "summary": "Import User Data",
+                "operationId": "getPackageDetail",
+                "parameters": [
+                    {
+                        "name": "Excel File",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "file"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/api/upload/products": {
+            "post": {
+                "tags": [
+                    "Import"
+                ],
+                "summary": "Upload Product Data",
+                "operationId": "getPackageDetail",
+                "parameters": [
+                    {
+                        "name": "Excel File",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "file"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/api/import/target": {
+            "post": {
+                "tags": [
+                    "Import"
+                ],
+                "summary": "Import Target Data",
+                "operationId": "getPackageDetail",
+                "parameters": [
+                    {
+                        "name": "Excel File",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "file"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/api/Status/vansalesman/{id}": {
+            "get": {
+                "tags": [
+                    "show data"
+                ],
+                "summary": "Get Van Salesman",
+                "operationId": "getPackageDetail",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
+        "/api/import/store": {
+            "post": {
+                "tags": [
+                    "Import"
+                ],
+                "summary": "Import Store Data",
+                "operationId": "getPackageDetail",
+                "parameters": [
+                    {
+                        "name": "Excel File",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "file"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Availability": {
+                "title": "Availability",
+                "description": "Availability",
+                "xml": {
+                    "name": "Availability"
+                }
+            },
+            "Branch": {
+                "title": "Branch",
+                "description": "Branch",
+                "xml": {
+                    "name": "Branch"
+                }
+            },
+            "City": {
+                "title": "City",
+                "description": "City",
+                "xml": {
+                    "name": "City"
+                }
+            },
+            "Designation": {
+                "title": "Designation",
+                "description": "Designation",
+                "xml": {
+                    "name": "Designation"
+                }
+            },
+            "Gift": {
+                "title": "Gift",
+                "description": "Gift",
+                "xml": {
+                    "name": "Gift"
+                }
+            },
+            "News": {
+                "title": "News",
+                "description": "News",
+                "xml": {
+                    "name": "News"
+                }
+            },
+            "Pool": {
+                "title": "Pool",
+                "description": "Pool",
+                "xml": {
+                    "name": "Pool"
+                }
+            },
+            "Product": {
+                "title": "Product",
+                "description": "Product",
+                "xml": {
+                    "name": "Product"
+                }
+            },
+            "Rank": {
+                "title": "Rank",
+                "description": "Rank",
+                "xml": {
+                    "name": "Rank"
+                }
+            },
+            "Sales": {
+                "title": "Sales",
+                "description": "Sales",
+                "xml": {
+                    "name": "Sales"
+                }
+            },
+            "SalesProduct": {
+                "title": "SalesProduct",
+                "description": "SalesProduct",
+                "xml": {
+                    "name": "SalesProduct"
+                }
+            },
+            "Store": {
+                "title": "Store",
+                "description": "Store",
+                "xml": {
+                    "name": "Store"
+                }
+            },
+            "Target": {
+                "title": "Target",
+                "description": "Target",
+                "xml": {
+                    "name": "Target"
+                }
+            },
+            "TargetProduct": {
+                "title": "TargetProduct",
+                "description": "TargetProduct",
+                "xml": {
+                    "name": "TargetProduct"
+                }
+            },
+            "User": {
+                "title": "User",
+                "description": "User model",
+                "properties": {
+                    "": {
+                        "title": "name",
+                        "description": "Name of the new user",
+                        "type": "string",
+                        "example": "Faisal Faiz"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "User"
+                }
+            },
+            "UserBranch": {
+                "title": "UserBranch",
+                "description": "UserBranch",
+                "xml": {
+                    "name": "UserBranch"
+                }
+            },
+            "UserDesignation": {
+                "title": "UserDesignation",
+                "description": "UserDesignation",
+                "xml": {
+                    "name": "UserDesignation"
+                }
+            },
+            "Visibility": {
+                "title": "Visibility",
+                "description": "Visibility",
+                "xml": {
+                    "name": "Visibility"
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

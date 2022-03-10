@@ -1,0 +1,34 @@
+@import 'variables';
+@import 'fonts';
+@import 'nucleo';
+@import '~notyf/notyf.min';
+@import '../vendor/@fortawesome/fontawesome-free/css/all.min';
+@import '~lity/dist/lity';
+@import '~filepond/dist/filepond.min';
+
+.bg-gradient-primary {
+    background: linear-gradient(87deg, #0c306e 0, #1a3a75 100%) !important;
+}
+
+@import 'argon';
+
+.filepond--panel-root {
+    border-radius: 0;
+}
+
+.router-link-exact-active {
+    background: #f7f7f7;
+}
+
+.filepond--root :not(text) {
+    cursor: pointer;
+}
+
+.is-current {
+    background: #172a4d!important;
+}
+
+a.btn.my-4.btn-default.text-white.btn-sm {
+    background-color: #68758b;
+    border-color: #68758b;
+}

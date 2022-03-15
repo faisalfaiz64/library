@@ -60,20 +60,20 @@
           no-border-collapse
           @filtered="filtered"
         >
-          <template v-slot:cell(Action)="row">
-            <b-button pill v-if="row.item.status == 'CHECKEDOUT'" disabled variant="primary">
+      <template v-slot:cell(Action)="row">
+      <b-button pill v-if="row.item.status == 'CHECKEDOUT'" disabled variant="primary">
 				CHECKEDOUT
 			</b-button>
-            <b-button pill v-else variant="primary" @click="checkout(row.item)">
+      <b-button pill v-else variant="primary" @click="checkout(row.item)">
 				CHECKEDOUT
 			</b-button>
-            <b-button pill v-if="row.item.status == 'AVAILABLE'" disabled variant="primary">
+      <b-button pill v-if="row.item.status == 'AVAILABLE' || row.item.bookDetail.user_id !== user.id" disabled variant="primary">
 				CHECKEDIN
 			</b-button>
-            <b-button pill v-else variant="primary" @click="checkin(row.item)">
+      <b-button pill v-else variant="primary" @click="checkin(row.item)">
 				CHECKEDIN
 			</b-button>
-          </template>
+      </template>
         </b-table>
         <b-col cols="8" class="mx-auto mt-4">
           <b-pagination
@@ -93,7 +93,13 @@
 
 <script>
 import axios from "axios";
+import { mapGetters } from 'vuex'
+
 export default {
+  computed: mapGetters({
+    authenticated: 'auth/check',
+    user: 'auth/user',
+  }),
   data() {
     return {
       perPage: 10,
@@ -109,15 +115,12 @@ export default {
         { key: "status", label: "Status", sortable: false },
         { key: "Action" },
       ],
+      
       books: [],
       selectedUser: "",
     };
   },
-  computed: {
-    totalRows() {
-      return this.books.length;
-    },
-  },
+  
   methods: {
       async showCreateBook() {
       this.$router.push("/book/create");

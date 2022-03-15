@@ -7,7 +7,7 @@ return [
     'documentations' => [
         'default' => [
             'api' => [
-                'title' => 'Nas Project',
+                'title' => 'Projects API',
             ],
 
             'routes' => [

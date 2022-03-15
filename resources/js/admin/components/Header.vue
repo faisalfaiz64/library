@@ -35,9 +35,6 @@
 					</div>
 					<div class="menu-text" v-if="user">{{ user.email }}</div>
 				</template>
-				<b-dropdown-item link-class="d-flex align-items-center" href="/admin/settings">
-					Setting <i class="fa fa-wrench fa-fw ml-auto text-gray-400 f-s-16"></i>
-				</b-dropdown-item>
 				<b-dropdown-divider />
 				<b-dropdown-item link-class="d-flex align-items-center" href="#" @click.prevent="logoutUser">
 					Log Out <i class="fa fa-toggle-off fa-fw ml-auto text-gray-400 f-s-16"></i>

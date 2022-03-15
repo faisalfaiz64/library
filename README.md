@@ -20,3 +20,4 @@
 - **[vue.js]**
 - **[vueX]**
 - **[routing]**
+- - **[jwt token]**
